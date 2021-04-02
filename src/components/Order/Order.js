@@ -4,21 +4,23 @@ import './Order.css'
 
 const Order = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
-    const [ bookings, setBookings ]= useState([]) 
-    useEffect(()=>{
-        fetch('https://vast-bayou-76386.herokuapp.com/orders?email='+loggedInUser.email,{
-            method:'GET',
-            headers: { 
+    const [bookings, setBookings] = useState([])
+    useEffect(() => {
+        fetch('https://vast-bayou-76386.herokuapp.com/orders?email=' + loggedInUser.email, {
+            method: 'GET',
+            headers: {
                 'Content-Type': 'application/json',
                 authorization: `Bearer ${sessionStorage.getItem('token')}`
-        }
+            }
         })
-        .then(res => res.json())
-        .then(data => setBookings(data))
-        .catch(err =>{
-            alert('Error ocured, please Login again to see your all order')
-        })
-    },[])
+            .then(res => res.json())
+            .then(data => setBookings(data))
+            .catch(err => {
+                // note: I don't know why this is happening, I tried to fix it but failed
+                // After login, first time user cannot see his orders, but later, he can do this
+                alert('Error ocured, please Login again to see your all order')
+            })
+    }, [])
     return (
         <div className='order'>
             <h3>You have {bookings.length} orders</h3>

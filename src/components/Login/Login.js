@@ -6,6 +6,7 @@ import { createUserWithEmailAndPassword, handleGoogleSignIn, initializeLoginFram
 import firebase from "firebase/app";
 
 const Login = () => {
+
     const [isNewUser, setIsNewUser] = useState(false);
     // to save user input before validation
     const [inputFields, setInputFields] = useState({
@@ -62,7 +63,6 @@ const Login = () => {
     const storeAuthToken = () =>{
         firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
         .then(function(idToken) {
-            // console.log(idToken);
             sessionStorage.setItem('token',idToken)
             history.replace(from)
           }).catch(function(error) {

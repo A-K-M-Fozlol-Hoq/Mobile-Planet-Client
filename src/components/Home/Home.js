@@ -13,6 +13,7 @@ const Home = () => {
                 setProducts(data)
             })
     }, [])
+    
     return (
         <div>
             <Header></Header>

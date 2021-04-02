@@ -17,6 +17,7 @@ export const UserContext = createContext();
 
 function App() {
   const [loggedInuser, setLoggedInUser] = useState({});
+
   return (
     <UserContext.Provider value={[loggedInuser, setLoggedInUser]}>
       <Router>
@@ -47,5 +48,6 @@ function App() {
     </UserContext.Provider>
   );
 }
+
 
 export default App;

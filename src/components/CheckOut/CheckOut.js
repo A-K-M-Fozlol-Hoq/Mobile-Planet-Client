@@ -3,6 +3,8 @@ import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
 import { UserContext } from '../../App';
 import './CheckOut.css'
+
+
 const CheckOut = () => {
     const { register, handleSubmit, watch, errors } = useForm();
     const { phoneKey } = useParams();
@@ -12,7 +14,7 @@ const CheckOut = () => {
             .then(res => res.json())
             .then(data => setPhone(data))
     }, [phoneKey])
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext) 
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
 
     const onSubmit = data => {
         const orderDetails = { ...loggedInUser, product: phone, shipment: data, orderTime: new Date() }
