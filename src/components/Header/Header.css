@@ -1,0 +1,35 @@
+.header{
+    border: 4px solid black;
+    height: auto;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+.header .logo{
+    height: 50px;
+}
+.title-container{
+    color: rgba(255, 255, 255, 0.699);
+    text-align: center;
+    font-size: 2em;
+}
+.nav{
+    width:80%;
+    margin:auto;
+    margin-top: 10px;
+}
+.menu{
+    float:right;
+}
+.nav div{
+    display: inline;
+    margin-left: 50px;    
+}
+  
+.nav a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.877);
+    font-weight: bold;
+}
+.menu-item{
+    margin:10px;
+}

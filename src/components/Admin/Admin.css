@@ -1,0 +1,25 @@
+.admin{
+    height: 100vh;
+    display:grid;
+    grid-template-columns: 300px auto;
+}
+.admin-menu{
+    background-color: red;
+}
+.admin img{
+    width:20px;
+}
+.admin form{
+    width:500px;
+    margin: auto;
+}
+.input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+  }
