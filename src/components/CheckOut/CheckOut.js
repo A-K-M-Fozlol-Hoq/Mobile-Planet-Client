@@ -8,7 +8,7 @@ const CheckOut = () => {
     const { phoneKey } = useParams();
     const [phone, setPhone] = useState({});
     useState(() => {
-        fetch('http://localhost:5055/phone/' + phoneKey)
+        fetch('https://vast-bayou-76386.herokuapp.com/phone/' + phoneKey)
             .then(res => res.json())
             .then(data => setPhone(data))
     }, [phoneKey])
@@ -17,7 +17,7 @@ const CheckOut = () => {
     const onSubmit = data => {
         const orderDetails = { ...loggedInUser, product: phone, shipment: data, orderTime: new Date() }
         console.log(orderDetails)
-        fetch('http://localhost:5055/addOrder', {
+        fetch('https://vast-bayou-76386.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

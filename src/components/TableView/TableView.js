@@ -20,7 +20,7 @@ const TableView = ( props ) => {
       
       function deleteProuct(event, id){
           console.log(event,id)
-          const url=`http://localhost:5055/deletephone/${id}`;
+          const url=`https://vast-bayou-76386.herokuapp.com/deletephone/${id}`;
           console.log(url)
         fetch(url,{
             method: 'DELETE',

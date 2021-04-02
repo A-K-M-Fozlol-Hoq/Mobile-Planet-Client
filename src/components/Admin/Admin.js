@@ -20,7 +20,7 @@ const Admin = () => {
             imageURL: imageURL
         };
         console.log(phoneData)
-        const url = `http://localhost:5055/addPhone`;
+        const url = `https://vast-bayou-76386.herokuapp.com/addPhone`;
 
         fetch(url, {
             method: 'POST',
@@ -63,7 +63,7 @@ const Admin = () => {
     }
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5055/phones')
+        fetch('https://vast-bayou-76386.herokuapp.com/phones')
             .then(res => res.json())
             .then(data => {
                 setProducts(data)
