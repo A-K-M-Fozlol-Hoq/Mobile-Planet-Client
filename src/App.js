@@ -30,7 +30,7 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
-          {/* <PrivateRoute path="/order">
+          <PrivateRoute path="/order">
             <Order></Order>
           </PrivateRoute>
           <PrivateRoute path="/admin">
@@ -38,16 +38,7 @@ function App() {
           </PrivateRoute>
           <PrivateRoute exact path="/checkout/:phoneKey">
             <CheckOut></CheckOut>
-          </PrivateRoute> */}
-          <Route path="/order">
-            <Order></Order>
-          </Route>
-          <Route path="/admin">
-            <Admin></Admin>
-          </Route>
-          <Route exact path="/checkout/:phoneKey">
-            <CheckOut></CheckOut>
-          </Route>
+          </PrivateRoute>
           <Route path="*">
             <NotFound></NotFound>
           </Route>
